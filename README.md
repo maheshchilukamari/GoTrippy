@@ -154,6 +154,8 @@ The backend includes API groups for:
 
 Detailed API documentation is available in [API_DOCS.md](./API_DOCS.md).
 
+For a complete project report covering architecture, deployment, troubleshooting, and learning outcomes, see [PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md).
+
 ## Authentication Flow
 
 1. Admin or partner submits login credentials.
