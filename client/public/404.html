@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GoTrippy</title>
+    <script>
+      (function () {
+        var segmentCount = 1;
+        var locationRef = window.location;
+        var repoPath = locationRef.pathname.split("/").slice(0, 1 + segmentCount).join("/");
+        var routePath = locationRef.pathname
+          .slice(1)
+          .split("/")
+          .slice(segmentCount)
+          .join("/")
+          .replace(/&/g, "~and~");
+
+        locationRef.replace(
+          locationRef.protocol +
+            "//" +
+            locationRef.hostname +
+            (locationRef.port ? ":" + locationRef.port : "") +
+            repoPath +
+            "/?/" +
+            routePath +
+            (locationRef.search ? "&" + locationRef.search.slice(1).replace(/&/g, "~and~") : "") +
+            locationRef.hash
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
