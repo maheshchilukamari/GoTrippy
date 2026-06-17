@@ -332,7 +332,7 @@ Frontend production env:
 ```env
 VITE_API_BASE_URL=https://your-backend-url.com/api
 VITE_SOCKET_URL=https://your-backend-url.com
-VITE_BASE_PATH=/gotrippy/
+VITE_BASE_PATH=/GoTrippy/
 ```
 
 If the GitHub repository name is different, update:

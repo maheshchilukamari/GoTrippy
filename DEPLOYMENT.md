@@ -38,7 +38,7 @@ Set frontend production environment values in `client/.env`:
 ```env
 VITE_API_BASE_URL=https://your-backend-url.com/api
 VITE_SOCKET_URL=https://your-backend-url.com
-VITE_BASE_PATH=/gotrippy/
+VITE_BASE_PATH=/GoTrippy/
 VITE_BUSINESS_PHONE=8885863662
 VITE_WHATSAPP_NUMBER=918885863662
 ```
@@ -155,7 +155,7 @@ npm run preview
 With a GitHub Pages base path:
 
 ```bash
-$env:VITE_BASE_PATH="/gotrippy/"
+$env:VITE_BASE_PATH="/GoTrippy/"
 npm run build
 Remove-Item Env:\VITE_BASE_PATH
 ```
@@ -163,7 +163,7 @@ Remove-Item Env:\VITE_BASE_PATH
 On macOS/Linux:
 
 ```bash
-VITE_BASE_PATH=/gotrippy/ npm run build
+VITE_BASE_PATH=/GoTrippy/ npm run build
 ```
 
 ## Important Notes
