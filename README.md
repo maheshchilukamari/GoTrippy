@@ -330,8 +330,8 @@ Backend deployment should be separate using Render, Railway, Vercel serverless, 
 Frontend production env:
 
 ```env
-VITE_API_BASE_URL=https://your-backend-url.com/api
-VITE_SOCKET_URL=https://your-backend-url.com
+VITE_API_BASE_URL=https://gotrippy.onrender.com/api
+VITE_SOCKET_URL=https://gotrippy.onrender.com
 VITE_BASE_PATH=/GoTrippy/
 ```
 

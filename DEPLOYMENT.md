@@ -36,8 +36,8 @@ npm install
 Set frontend production environment values in `client/.env`:
 
 ```env
-VITE_API_BASE_URL=https://your-backend-url.com/api
-VITE_SOCKET_URL=https://your-backend-url.com
+VITE_API_BASE_URL=https://gotrippy.onrender.com/api
+VITE_SOCKET_URL=https://gotrippy.onrender.com
 VITE_BASE_PATH=/GoTrippy/
 VITE_BUSINESS_PHONE=8885863662
 VITE_WHATSAPP_NUMBER=918885863662
@@ -124,8 +124,8 @@ ADMIN_PASSWORD=ChangeMe123!
 After backend deployment, update frontend:
 
 ```env
-VITE_API_BASE_URL=https://your-backend-url.com/api
-VITE_SOCKET_URL=https://your-backend-url.com
+VITE_API_BASE_URL=https://gotrippy.onrender.com/api
+VITE_SOCKET_URL=https://gotrippy.onrender.com
 ```
 
 Then redeploy the frontend:
