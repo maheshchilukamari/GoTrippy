@@ -4,6 +4,7 @@ const baseURL = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_UR
 
 const http = axios.create({
   baseURL,
+  timeout: 90000,
   headers: {
     "Content-Type": "application/json"
   }
@@ -20,6 +21,14 @@ http.interceptors.request.use((config) => {
 });
 
 export const getApiError = (error) => {
+  if (error?.code === "ECONNABORTED") {
+    return "The server is taking too long to respond. Render may still be waking up. Please try again in a minute.";
+  }
+
+  if (!error?.response && error?.message === "Network Error") {
+    return "Could not reach the GoTrippy server. Please refresh and try again.";
+  }
+
   const data = error?.response?.data;
 
   if (data?.errors?.length) {

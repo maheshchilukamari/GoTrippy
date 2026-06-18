@@ -6,7 +6,13 @@ const AuthContext = createContext(null);
 export function AuthProvider({ children }) {
   const [admin, setAdmin] = useState(() => {
     const saved = localStorage.getItem("gotrippy_partner_user");
-    return saved ? JSON.parse(saved) : null;
+    try {
+      return saved ? JSON.parse(saved) : null;
+    } catch {
+      localStorage.removeItem("gotrippy_partner_user");
+      localStorage.removeItem("gotrippy_partner_token");
+      return null;
+    }
   });
   const [checkingAuth, setCheckingAuth] = useState(true);
 

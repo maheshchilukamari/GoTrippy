@@ -6,7 +6,7 @@ export default function ProtectedRoute({ children }) {
   const { checkingAuth, isAuthenticated } = useAuth();
 
   if (checkingAuth) {
-    return <LoadingSpinner label="Checking admin session" />;
+    return <LoadingSpinner label="Checking partner session" />;
   }
 
   if (!isAuthenticated) {
